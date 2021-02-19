@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import Landing from './components/Landing.js'
+import ProjectShow from './components/ProjectShow'
 
 function App() {
 
@@ -18,9 +19,19 @@ function App() {
   console.log(user)
   return (
     <div>
-      <Landing name={user.first_name + " " + user.last_name} />
+
+      <Landing 
+        first_name={user.first_name} 
+        last_name={user.last_name}
+        email={user.email}
+        links={user.links}
+        />
+      
+      <projectShow />
+
     </div>
   );
 }
 
 export default App;
+
