@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import Landing from './components/Landing.js'
-import ProjectShow from './components/ProjectShow'
+import ProjectsContainer from './components/ProjectsContainer'
 
 function App() {
 
@@ -16,7 +16,7 @@ function App() {
     .then(response => response.json())
     .then(user => setUser(user))
   }
-  console.log(user)
+
   return (
     <div>
 
@@ -25,9 +25,9 @@ function App() {
         last_name={user.last_name}
         email={user.email}
         links={user.links}
-        />
+      />
       
-      <projectShow />
+      <ProjectsContainer />
 
     </div>
   );
